@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import '../styles/styles.css'
 import Clock from './Clock'
@@ -12,9 +12,12 @@ function App() {
   const scheduledInjectionHour3 = 22;
   const scheduledInjections = [scheduledInjectionHour1, scheduledInjectionHour2, scheduledInjectionHour3];
 
-  setInterval(() => {
+  useEffect(() => {
+    const interval = setInterval(() => {
         setDate(new Date());
     }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="App">

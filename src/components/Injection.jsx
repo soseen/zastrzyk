@@ -10,7 +10,7 @@ const Injection = ({scheduledHour, date}) => {
     const audio = new Audio(notification);
 
     useEffect(() => {
-        if(highlight === false && injectionDone === false && (scheduledHour - date.getHours()) === 1 && date.getMinutes() > 40){
+        if(highlight === false && injectionDone === false && (scheduledHour - date.getHours()) === 1 && date.getMinutes() >= 40){
             console.log(scheduledHour);
             setHighlight(true);
             audio.play();
@@ -25,15 +25,12 @@ const Injection = ({scheduledHour, date}) => {
             setHighlight(false);
         }
         setInjectionDone(!injectionDone);
-        audio.play();
     }
 
     return(
         <div onClick={handleInjection} className={`injection ${injectionDone ? 'injected' : ''} ${highlight ? 'highlighted' : ''}`}>
             <div className='injection-description'>
                 <p>Zastrzyk</p>
-            </div>
-            <div className='injection-time'>
                 <p>{`${scheduledHour}:00`}</p>
             </div>
         </div>
