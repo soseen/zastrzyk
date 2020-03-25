@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0114a35309428bd1d1ea00226a8c8c53",
+    "revision": "57523e882d44a26b738e4475c0ade0c9",
     "url": "/zastrzyk/index.html"
   },
   {
-    "revision": "0f2eb042c0075e6a5336",
-    "url": "/zastrzyk/static/css/main.cff754f7.chunk.css"
+    "revision": "69bc42911333ef97e653",
+    "url": "/zastrzyk/static/css/main.6c1355a3.chunk.css"
   },
   {
     "revision": "770cc4a2e01c63fb12a4",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zastrzyk/static/js/2.9bb003c7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0f2eb042c0075e6a5336",
+    "revision": "69bc42911333ef97e653",
     "url": "/zastrzyk/static/js/main.86be8724.chunk.js"
   },
   {
