@@ -27,9 +27,10 @@ body {
 }
 
 .App .clock {
-  margin: 60px auto;
+  margin: 6rem auto;
+  margin-top: 2rem;
   width: 90%;
-  height: 350px;
+  height: 310px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,7 +51,7 @@ body {
 }
 
 .App .injection {
-  margin: 15px;
+  margin: 1.8rem;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,7 +80,7 @@ body {
 }
 
 .App .injection .injection-description p {
-  margin: 25px;
+  margin: 3rem;
 }
 
 .App .injected {
@@ -142,6 +143,9 @@ body {
   .App {
     width: 90%;
   }
+  .App .clock {
+    height: 250px;
+  }
   html {
     font-size: 8px;
   }
@@ -151,6 +155,9 @@ body {
   .App {
     width: 90%;
   }
+  .App .clock {
+    height: 200px;
+  }
   html {
     font-size: 6px;
   }
@@ -159,6 +166,9 @@ body {
 @media screen and (max-width: 540px) {
   .App {
     width: 90%;
+  }
+  .App .clock {
+    height: 150px;
   }
   html {
     font-size: 4px;
