@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/zastrzyk/static/css/main.a22cda3e.chunk.css",
+    "main.js": "/zastrzyk/static/js/main.4dabaa21.chunk.js",
+    "main.js.map": "/zastrzyk/static/js/main.4dabaa21.chunk.js.map",
+    "runtime-main.js": "/zastrzyk/static/js/runtime-main.49c11e78.js",
+    "runtime-main.js.map": "/zastrzyk/static/js/runtime-main.49c11e78.js.map",
+    "static/js/2.9bb003c7.chunk.js": "/zastrzyk/static/js/2.9bb003c7.chunk.js",
+    "static/js/2.9bb003c7.chunk.js.map": "/zastrzyk/static/js/2.9bb003c7.chunk.js.map",
+    "index.html": "/zastrzyk/index.html",
+    "precache-manifest.9efd820a6cccd9ff715c13616a7c41e4.js": "/zastrzyk/precache-manifest.9efd820a6cccd9ff715c13616a7c41e4.js",
+    "service-worker.js": "/zastrzyk/service-worker.js",
+    "static/css/main.a22cda3e.chunk.css.map": "/zastrzyk/static/css/main.a22cda3e.chunk.css.map",
+    "static/js/2.9bb003c7.chunk.js.LICENSE.txt": "/zastrzyk/static/js/2.9bb003c7.chunk.js.LICENSE.txt",
+    "static/media/notification.mp3": "/zastrzyk/static/media/notification.4e6ff350.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.49c11e78.js",
+    "static/js/2.9bb003c7.chunk.js",
+    "static/css/main.a22cda3e.chunk.css",
+    "static/js/main.4dabaa21.chunk.js"
+  ]
+}
