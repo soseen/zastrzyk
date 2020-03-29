@@ -30,7 +30,7 @@ body {
   margin: 6rem auto;
   margin-top: 2rem;
   width: 90%;
-  height: 310px;
+  height: 350px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,7 +51,9 @@ body {
 }
 
 .App .injection {
+  position: relative;
   margin: 1.8rem;
+  padding: 2rem 0;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,6 +83,52 @@ body {
 
 .App .injection .injection-description p {
   margin: 3rem;
+  color: black;
+}
+
+.App .injection .injection-description .desc {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .injection .injection-description .desc .remove-injection-button {
+  width: 9rem;
+  height: 9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #000000;
+  font-size: 7rem;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.App .injection .injection-description .desc .remove-injection-button:hover {
+  color: #ffffff;
+}
+
+.App .injection .injection-description .desc:hover > .remove-injection-button {
+  opacity: 1;
+}
+
+.App .injection .injection-description .schedule {
+  width: 35%;
 }
 
 .App .injected {
@@ -90,11 +138,172 @@ body {
 }
 
 .App .highlighted {
-  background-color: #7b2b2f;
+  background-color: #9f292f;
   -webkit-animation: glow 4s infinite;
           animation: glow 4s infinite;
   -webkit-transform: all 2s;
           transform: all 2s;
+}
+
+.App .new-injection {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.App .new-injection .new-injection-button {
+  cursor: pointer;
+  width: 8rem;
+  height: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  font-size: 4rem;
+  color: #30434c;
+  margin: 10px auto;
+  margin-top: 20px;
+  -webkit-box-shadow: 6px 6px 12px #0a161c,  -6px -6px 12px #10242e;
+          box-shadow: 6px 6px 12px #0a161c,  -6px -6px 12px #10242e;
+}
+
+.App .new-injection .new-injection-button:active {
+  -webkit-box-shadow: inset 6px 6px 12px #0a161c,  inset -6px -6px 12px #10242e;
+          box-shadow: inset 6px 6px 12px #0a161c,  inset -6px -6px 12px #10242e;
+}
+
+.App .new-injection .new-injection-button:hover {
+  -webkit-box-shadow: 3px 3px 6px #0a161c,  -3px -3px 6px #10242e;
+          box-shadow: 3px 3px 6px #0a161c,  -3px -3px 6px #10242e;
+}
+
+.App .new-injection .new-injection-form {
+  margin: 50px auto;
+  width: 60%;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 6px 6px 12px #0a161c,  -6px -6px 12px #10242e;
+          box-shadow: 6px 6px 12px #0a161c,  -6px -6px 12px #10242e;
+}
+
+.App .new-injection .new-injection-form .form-inputs-row {
+  width: 100%;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .new-injection .new-injection-form .form-inputs-row .form-inputs-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: auto 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.App .new-injection .new-injection-form .form-inputs-row .form-inputs-column label {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App .new-injection .new-injection-form .form-inputs-row .form-inputs-column input, .App .new-injection .new-injection-form .form-inputs-row .form-inputs-column select {
+  font-size: 3rem;
+  padding: 10px;
+  width: 100%;
+  background-color: #0d1d25;
+  -webkit-box-shadow: inset 6px 6px 12px #0a161c,  inset -6px -6px 12px #10242e;
+          box-shadow: inset 6px 6px 12px #0a161c,  inset -6px -6px 12px #10242e;
+  border: none;
+  border-radius: 2rem;
+  color: white;
+  outline: none;
+  text-align: center;
+}
+
+.App .new-injection .new-injection-form .form-inputs-row .form-inputs-column input:focus, .App .new-injection .new-injection-form .form-inputs-row .form-inputs-column select:focus {
+  background-color: #0d1d25;
+  color: white;
+}
+
+.App .new-injection .new-injection-form .form-inputs-row .form-inputs-column input:active, .App .new-injection .new-injection-form .form-inputs-row .form-inputs-column select:active {
+  background-color: #0d1d25;
+  color: white;
+}
+
+.App .new-injection .new-injection-form .add-injection-button {
+  color: #ffffff;
+  margin: 1rem auto;
+  margin-right: 10px;
+  width: 30%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #122931;
+  -webkit-box-shadow: 6px 6px 12px #0a161c,  -6px -6px 12px #10242e;
+          box-shadow: 6px 6px 12px #0a161c,  -6px -6px 12px #10242e;
+  font-size: 3rem;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.App .new-injection .new-injection-form .add-injection-button:active {
+  background-color: #0d2229;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  font-size: 3rem;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 @-webkit-keyframes glow {
@@ -105,10 +314,10 @@ body {
             transform: scale(1);
   }
   50% {
-    -webkit-box-shadow: 0 0 10px 10px #a41920;
-            box-shadow: 0 0 10px 10px #a41920;
-    -webkit-transform: scale(1.04);
-            transform: scale(1.04);
+    -webkit-box-shadow: 0 0 10px 8px #a41920;
+            box-shadow: 0 0 10px 8px #a41920;
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
   100% {
     -webkit-box-shadow: 0 0 10px 5px #a41920;
@@ -126,10 +335,10 @@ body {
             transform: scale(1);
   }
   50% {
-    -webkit-box-shadow: 0 0 10px 10px #a41920;
-            box-shadow: 0 0 10px 10px #a41920;
-    -webkit-transform: scale(1.04);
-            transform: scale(1.04);
+    -webkit-box-shadow: 0 0 10px 8px #a41920;
+            box-shadow: 0 0 10px 8px #a41920;
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
   }
   100% {
     -webkit-box-shadow: 0 0 10px 5px #a41920;

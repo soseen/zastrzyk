@@ -1,4 +1,14 @@
-
+@mixin button {
+    cursor: pointer;
+    width: 8rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 4rem;
+    color: #30434c;
+}
 
 html {
     font-size: 62.5%;
@@ -22,7 +32,7 @@ body {
         margin: 6rem auto;
         margin-top: 2rem;
         width: 90%;
-        height: 310px;
+        height: 350px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -38,7 +48,9 @@ body {
         }
     }
     .injection {
+        position: relative;
         margin: 1.8rem;
+        padding: 2rem 0;
         width: 90%;
         display: flex;
         font-family: sans-serif;
@@ -57,6 +69,34 @@ body {
             width: 100%;
             p {
                 margin: 3rem;
+                color: black;
+            }
+            .desc {
+                width: 60%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .remove-injection-button {
+                    width: 9rem;
+                    height: 9rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    color: #000000;
+                    font-size: 7rem;
+                    opacity: 0;
+                    transition: opacity 0.4s;
+                    &:hover {
+                        color: #ffffff;
+                    }
+                }
+                &:hover > .remove-injection-button {
+                    opacity: 1;
+                }
+            }
+            .schedule {
+                width: 35%;
             }
         }
     }
@@ -65,10 +105,121 @@ body {
         transform: all 2s;
     }
     .highlighted {
-        background-color: #7b2b2f;
+        background-color: #9f292f;
         animation: glow 4s infinite;
         transform: all 2s;
     }
+    .new-injection {
+        width: 100%;
+        margin: 10px auto;
+        .new-injection-button{
+            @include button();
+            margin: 10px auto;
+            margin-top: 20px;
+            box-shadow:  6px 6px 12px #0a161c, 
+            -6px -6px 12px #10242e;
+            &:active {
+            box-shadow: inset 6px 6px 12px #0a161c, 
+            inset -6px -6px 12px #10242e;
+            }
+            &:hover {
+            box-shadow:  3px 3px 6px #0a161c, 
+            -3px -3px 6px #10242e;
+            }
+        }
+        .new-injection-form {
+            margin: 50px auto;
+            width: 60%;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow:  6px 6px 12px #0a161c, 
+             -6px -6px 12px #10242e;
+            .form-inputs-row{
+                width: 100%;
+                margin: 10px auto;
+                display: flex;
+                align-items: center;
+                .form-inputs-column {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin: auto 10px;
+                    width: 100%;
+                    padding: 10px;
+                    label {
+                        font-size: 2rem;
+                        margin-bottom: 0.5rem;
+                        margin-left: 0.5rem;
+                        color: white;
+                        display: flex;
+                    }
+                    input, select {
+                        font-size: 3rem;
+                        padding: 10px;
+                        width: 100%;
+                        background-color: #0d1d25;
+                        box-shadow: inset 6px 6px 12px #0a161c, 
+                        inset -6px -6px 12px #10242e;
+                        border: none;
+                        border-radius: 2rem;
+                        color: white;
+                        outline: none;
+                        text-align: center;
+                        &:focus {
+                            background-color: #0d1d25;
+                            color: white;
+                        }
+                        &:active {
+                            background-color: #0d1d25;
+                            color: white;
+                        }
+                    }
+                }
+            }
+            .add-injection-button {
+                color: #ffffff;
+                margin: 1rem auto;
+                margin-right: 10px;
+                width: 30%;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                background-color: #122931;
+                box-shadow:  6px 6px 12px #0a161c, 
+                -6px -6px 12px #10242e;
+                font-size: 3rem;
+                padding: 1rem;
+                cursor: pointer;
+                &:active {
+                    background-color: #0d2229;
+                }
+            }
+        }
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    font-size: 3rem;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 @keyframes glow {
@@ -77,8 +228,8 @@ body {
         transform: scale(1);
     }
     50% {
-        box-shadow: 0 0 10px 10px #a41920;
-        transform: scale(1.04);
+        box-shadow: 0 0 10px 8px #a41920;
+        transform: scale(1.02);
     }
     100% {
         box-shadow: 0 0 10px 5px #a41920;

@@ -3,14 +3,13 @@ import { useState } from 'react'
 import '../styles/styles.css'
 import Clock from './Clock'
 import Injection from './Injection'
+import NewInjectionRule from './NewInjectionRule'
+import defaultInjections from '../data/injections'
 
-function App() {
+const App = () => {
   
   const [date, setDate] = useState(new Date());
-  const scheduledInjectionHour1 = 9;
-  const scheduledInjectionHour2 = 18;
-  const scheduledInjectionHour3 = 22;
-  const scheduledInjections = [scheduledInjectionHour1, scheduledInjectionHour2, scheduledInjectionHour3];
+  const [injections, setInjections] = useState(defaultInjections);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,12 +18,28 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
+
+  const addInjection = (injection) => {
+    setInjections(
+        [...injections, injection]
+          .sort((a,b) => a.scheduledHour - b.scheduledHour)
+    );
+  }
+
+  const removeInjection = (injection) => {
+    setInjections(
+      injections
+        .filter(item => item.scheduledHour !== injection.scheduledHour)
+    );
+  }
+
   return (
     <div className="App">
         <Clock date={date}/>
-        <Injection scheduledHour={scheduledInjectionHour1} date={date} />
-        <Injection scheduledHour={scheduledInjectionHour2} date={date} />
-        <Injection scheduledHour={scheduledInjectionHour3} date={date} />
+        {injections.map((injection) => (
+          <Injection injection={injection} date={date} removeInjection={removeInjection} />
+        ))}
+        <NewInjectionRule injections={injections} addInjection={addInjection} />
     </div>
   );
 }
