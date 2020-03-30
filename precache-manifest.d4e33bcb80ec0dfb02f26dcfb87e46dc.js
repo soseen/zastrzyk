@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7dbc40763e81e428e6dcbfdb91e5df70",
+    "revision": "59e37a701c7685dda293235a7e401d97",
     "url": "/zastrzyk/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zastrzyk/static/css/2.f787c778.chunk.css"
   },
   {
-    "revision": "b0f72b99a246d01a2aea",
+    "revision": "76653f56aafc5c8c8521",
     "url": "/zastrzyk/static/css/main.428bf4fa.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zastrzyk/static/js/2.c41a4c74.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b0f72b99a246d01a2aea",
-    "url": "/zastrzyk/static/js/main.9b14ca53.chunk.js"
+    "revision": "76653f56aafc5c8c8521",
+    "url": "/zastrzyk/static/js/main.3f3977ec.chunk.js"
   },
   {
     "revision": "a7f221289c387c3ecdd4",

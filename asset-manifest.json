@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/zastrzyk/static/css/main.428bf4fa.chunk.css",
-    "main.js": "/zastrzyk/static/js/main.9b14ca53.chunk.js",
-    "main.js.map": "/zastrzyk/static/js/main.9b14ca53.chunk.js.map",
+    "main.js": "/zastrzyk/static/js/main.3f3977ec.chunk.js",
+    "main.js.map": "/zastrzyk/static/js/main.3f3977ec.chunk.js.map",
     "runtime-main.js": "/zastrzyk/static/js/runtime-main.49c11e78.js",
     "runtime-main.js.map": "/zastrzyk/static/js/runtime-main.49c11e78.js.map",
     "static/css/2.f787c778.chunk.css": "/zastrzyk/static/css/2.f787c778.chunk.css",
     "static/js/2.c41a4c74.chunk.js": "/zastrzyk/static/js/2.c41a4c74.chunk.js",
     "static/js/2.c41a4c74.chunk.js.map": "/zastrzyk/static/js/2.c41a4c74.chunk.js.map",
     "index.html": "/zastrzyk/index.html",
-    "precache-manifest.4802d3b479c1389131eeb0830544ce63.js": "/zastrzyk/precache-manifest.4802d3b479c1389131eeb0830544ce63.js",
+    "precache-manifest.d4e33bcb80ec0dfb02f26dcfb87e46dc.js": "/zastrzyk/precache-manifest.d4e33bcb80ec0dfb02f26dcfb87e46dc.js",
     "service-worker.js": "/zastrzyk/service-worker.js",
     "static/css/2.f787c778.chunk.css.map": "/zastrzyk/static/css/2.f787c778.chunk.css.map",
     "static/css/main.428bf4fa.chunk.css.map": "/zastrzyk/static/css/main.428bf4fa.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.f787c778.chunk.css",
     "static/js/2.c41a4c74.chunk.js",
     "static/css/main.428bf4fa.chunk.css",
-    "static/js/main.9b14ca53.chunk.js"
+    "static/js/main.3f3977ec.chunk.js"
   ]
 }
